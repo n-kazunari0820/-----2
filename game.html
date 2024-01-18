@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>クイズ</title>
+    
+</head>
+
+<body>
+    <h1>クイズ</h1>
+
+    <div class="main">
+        <p>第1問</p>
+        <img src="images/pokemon1.jpeg" alt="">
+        <p class="title"></p>
+
+        <div class="sub">
+            <ul class="button">
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+            </ul>
+            <ul>
+                <li class="Q"></li>
+                <li class="Q"></li>
+                <li class="Q"></li>
+                <li class="Q"></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="page">
+        <button class="back">&lt;&lt;前に戻る</button>
+        <button class="go">次に進む&gt;&gt;</button>
+    </div>
+    
+    <script>
+        const title = document.querySelector('.title')
+        const list = document.querySelectorAll('ul .Q')
+        const num = document.querySelectorAll('.button li button')
+        title.textContent = "このポケモンの名前は?"
+
+        list[0].textContent = "ヤブクロク"
+        list[1].textContent = "ヤブクロン"
+        list[2].textContent = "ヤブクナナ"
+        list[3].textContent = "ピカチュウ"
+
+        num[0].textContent = "a"
+        num[1].textContent = "b"
+        num[2].textContent = "c"
+        num[3].textContent = "d"
+
+        num[0].onclick = function () {
+            window.alert("違います！")
+        }
+        num[1].onclick = function () {
+            window.alert("正解です！")
+        }
+        num[2].onclick = function () {
+            window.alert("違います！")
+        }
+        num[3].onclick = function () {
+            window.alert("そんなわけない！")
+        }
+
+    </script>
+</body>
+
+</html>
